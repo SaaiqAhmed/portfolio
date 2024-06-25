@@ -1,0 +1,35 @@
+:root {
+    --bg-colour: #0c0d11;
+    --title-colour: #e9f3f5;
+    --cursor-colour: #e6e6e6;
+}
+
+.Background {
+    min-height: 100vh;
+    background-color: var(--bg-colour);
+    background-image: url('./images/noise-test.jpg');
+}
+
+.Title {
+    color: var(--title-colour);
+    font-size: 10rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 10%;
+    font-family: 'Gilda display', serif;
+    font-weight: 500;
+    letter-spacing: 0.75rem;
+}
+
+.Cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: var(--cursor-colour);
+    mix-blend-mode: soft-light;
+    pointer-events: none;
+}
