@@ -1,3 +1,45 @@
 * {
     cursor: none;
 }
+
+.title {
+    color: var(--title-colour);
+    font-size: 10rem;
+    font-size: 5vmax;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 20%;
+    font-family: 'Gilda display', serif;
+    font-weight: 500;
+    letter-spacing: 0.5vmax;
+    animation: fadeIn 2s ease-in-out, slideDown 2s ease-in-out;
+}
+
+.subtitle {
+    color: var(--title-colour);
+    font-size: 2rem;
+    font-size: 1vmax;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.45vmax;
+    animation: fadeIn 2s ease-in-out, slideDownExtra 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideDown {
+    0% { transform: translateY(-10%); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes slideDownExtra {
+    0% { transform: translateY(-70%); }
+    100% { transform: translateY(0); }
+}

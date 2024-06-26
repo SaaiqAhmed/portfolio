@@ -9,7 +9,8 @@ function App() {
   return (
     <div className="App">
       <div className={styles.Background}>
-        <header className={styles.Title}>Saaiq Ahmed</header>
+          <header className="title">Saaiq Ahmed</header>
+          <p className="subtitle">Data Science • Machine Learning • AI</p>
       </div>
       <Cursor />
     </div>

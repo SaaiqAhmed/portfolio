@@ -5,29 +5,20 @@
 }
 
 .Background {
-    min-height: 100vh;
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    height: 100vh;
     background-color: var(--bg-colour);
-    background-image: url('./images/noise-test.jpg');
+    background-image: url('./images/custom-bg.jpg');
 }
-
-.Title {
-    color: var(--title-colour);
-    font-size: 10rem;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding-top: 10%;
-    font-family: 'Gilda display', serif;
-    font-weight: 500;
-    letter-spacing: 0.75rem;
-}
-
 .Cursor {
     position: fixed;
     left: 0;
     top: 0;
     width: 64px;
     height: 64px;
+    width: 3vw;
+    height: 3vw;
     border-radius: 50%;
     background-color: var(--cursor-colour);
     mix-blend-mode: soft-light;
