@@ -7,7 +7,6 @@
 .Background {
     background-size: 100% auto;
     background-repeat: repeat-y;
-    height: 100vh;
     background-color: var(--bg-colour);
     background-image: url('./images/custom-bg.jpg');
 }
