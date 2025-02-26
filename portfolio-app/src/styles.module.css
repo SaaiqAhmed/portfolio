@@ -3,13 +3,13 @@
     --title-colour: #e9f3f5;
     --cursor-colour: #e6e6e6;
 }
-
 .Background {
     background-size: 100% auto;
     background-repeat: repeat-y;
     background-color: var(--bg-colour);
     background-image: url('./images/custom-bg.jpg');
 }
+
 .Cursor {
     position: fixed;
     left: 0;
@@ -22,4 +22,25 @@
     background-color: var(--cursor-colour);
     mix-blend-mode: soft-light;
     pointer-events: none;
+}
+
+section {
+    height: 100vh;
+}
+
+* {
+    cursor: none;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+    display: none;
 }

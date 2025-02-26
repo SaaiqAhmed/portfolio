@@ -1,19 +1,4 @@
-* {
-    cursor: none;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-}
 
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-*::-webkit-scrollbar {
-    display: none;
-}
 
 .title {
     color: var(--title-colour);
@@ -42,7 +27,7 @@ html, body {
     animation: fadeIn 2s ease-in-out, slideDownExtra 2s ease-in-out;
 }
 
-.body {
+.text {
     color: var(--title-colour);
     font-size: 1.5rem;
     font-size: 1vmax;
