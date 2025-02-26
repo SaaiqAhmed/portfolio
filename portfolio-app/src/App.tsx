@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import styles from './styles.module.css';
 import Cursor from './components/cursor';
+import Navbar from './components/navbar';
 
 // import planet1 from './images/planet_1.png';
 import art1 from './images/web-art-cactus.png';
@@ -12,6 +13,7 @@ function App() {
 
   return (
     <div>
+      <Navbar />
       <Cursor />
       <img src={art1} alt="cactus" className="art art1" />
       <img src={art2} alt="flinders" className="art art2" />

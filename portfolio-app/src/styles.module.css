@@ -3,6 +3,35 @@
     --title-colour: #e9f3f5;
     --cursor-colour: #e6e6e6;
 }
+* {
+    cursor: none;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-snap-type: y mandatory;
+}
+
+section {
+    scroll-snap-align: start;
+    height: 100vh;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    z-index: 1000;
+}
+
 .Background {
     background-size: 100% auto;
     background-repeat: repeat-y;
@@ -24,21 +53,6 @@
     pointer-events: none;
 }
 
-section {
-    height: 100vh;
-}
-
-* {
-    cursor: none;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-}
-
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 *::-webkit-scrollbar {
