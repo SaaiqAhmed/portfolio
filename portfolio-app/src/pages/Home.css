@@ -1,0 +1,92 @@
+.Main {
+    display: flex;
+    justify-self: center;
+    text-align: center;
+}
+
+.title {
+    color: var(--title-colour);
+    font-size: min(7.5rem, 10vmax);
+    font-family: 'Gilda display', serif;
+    font-weight: 500;
+    letter-spacing: 0.5vmax;
+    animation: fadeIn 2s ease-in-out, slideDown 2s ease-in-out;
+    padding: 0.75rem;
+}
+
+.subtitle {
+    color: var(--title-colour);
+    font-size: min(1.5rem, 2vmax);
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.45vmax;
+    animation: fadeIn 2s ease-in-out, slideDownExtra 2s ease-in-out;
+}
+
+.text {
+    color: var(--title-colour);
+    font-size: 1.5rem;
+    font-size: 1vmax;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: sans-serif;
+    letter-spacing: 0.25vmax;
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 62vh;
+    width: 90vw;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+.artContainer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-around;
+    align-items: flex-end;
+    animation: fadeIn 2s ease-in-out, slideUp 2s ease-in-out;
+}
+
+.art1 {
+    max-width: 20%;
+    max-height: 33vh;
+    height: auto;
+    width: auto;
+}
+
+.art2 {
+    max-width: 50%;
+    max-height: 33vh;
+    height: auto;
+    width: auto;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideDown {
+    0% { transform: translateY(-5%); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(5%); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes slideDownExtra {
+    0% { transform: translateY(-70%); }
+    100% { transform: translateY(0); }
+}
