@@ -1,0 +1,13 @@
+.Cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 64px;
+    height: 64px;
+    width: max(3vw,3vh);
+    height: max(3vw,3vh);
+    border-radius: 50%;
+    background-color: var(--cursor-colour);
+    mix-blend-mode: soft-light;
+    pointer-events: none;
+}

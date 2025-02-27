@@ -45,21 +45,6 @@ nav {
     background-image: url('./images/custom-bg.jpg');
 }
 
-.Cursor {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 64px;
-    height: 64px;
-    width: 3vw;
-    height: 3vw;
-    border-radius: 50%;
-    background-color: var(--cursor-colour);
-    mix-blend-mode: soft-light;
-    pointer-events: none;
-}
-
-
 /* Hide scrollbar for Chrome, Safari and Opera */
 *::-webkit-scrollbar {
     display: none;

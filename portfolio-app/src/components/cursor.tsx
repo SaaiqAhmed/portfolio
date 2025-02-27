@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styles from '../styles.module.css';
+import './cursor.css';
 import { motion, useMotionValue } from "framer-motion";
 
 function Cursor() {
@@ -19,7 +19,7 @@ function Cursor() {
 
     return (
         <motion.div
-        className={styles.Cursor}
+        className="Cursor"
         style={{
             translateX: cursorX,
             translateY: cursorY,

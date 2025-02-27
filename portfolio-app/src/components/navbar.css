@@ -19,6 +19,10 @@ nav a {
     border-radius: 0.5rem;
 }
 
+nav a:hover {
+    font-weight: bold;
+}
+
 nav .home {
     color: var(--title-colour);
     text-decoration: none;
@@ -91,6 +95,11 @@ nav .menu span {
         backdrop-filter: blur(5px);
         background-color: rgba(0, 0, 0, 0.5);
         border-width: 1px;
+        animation: fadeIn 0.5s ease-in-out;
     }
-    
+
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }    
 }
