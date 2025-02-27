@@ -6,7 +6,7 @@ function Navbar() {
     const [open, setOpen] = useState(false);
     return(
         <nav className="navbar">
-            <NavLink to="/" className="home"><a>Saaiq Ahmed</a></NavLink>
+            <NavLink to="/" className="home"><p>Saaiq Ahmed</p></NavLink>
             <div className="menu" onClick={() => setOpen(!open)}>
                 <span></span>
                 <span></span>

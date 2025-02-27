@@ -10,7 +10,7 @@
     font-family: 'Gilda display', serif;
     font-weight: 500;
     letter-spacing: 0.5vmax;
-    animation: fadeIn 2s ease-in-out, slideDown 2s ease-in-out;
+    /* animation: fadeIn 2s ease-in-out, slideDown 2s ease-in-out; */
     padding: 0.75rem;
 }
 
@@ -20,7 +20,7 @@
     font-family: sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.45vmax;
-    animation: fadeIn 2s ease-in-out, slideDownExtra 2s ease-in-out;
+    /* animation: fadeIn 2s ease-in-out, slideDownExtra 2s ease-in-out; */
 }
 
 .text {
@@ -45,6 +45,39 @@
     overflow-y: auto;
     overflow-x: auto;
 }
+
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.aboutCard {
+    margin-top: 10px;
+    margin-left: 5%;
+    border: 1px;
+    border-style: solid;
+    width: 100%;
+    height: 95%;
+    border-radius: 5rem;
+    background: linear-gradient(135deg,rgba(255,255,255,0.05),rgba(0, 0, 0, 0.1));
+    border-color: var(--title-colour);
+}
+
+.aboutText {
+    color: var(--title-colour);
+    margin: 3rem 3rem 3rem 3rem;
+}
+
+@media (max-width: 1000px) {
+    .about {
+        flex-direction: column;
+    }
+    .aboutCard {
+        width: 70vw;
+    }
+}
+
 .artContainer {
     position: fixed;
     bottom: 0;
@@ -54,7 +87,7 @@
     /* flex-direction: row; */
     justify-content: space-around;
     align-items: flex-end;
-    animation: fadeIn 2s ease-in-out, slideUp 2s ease-in-out;
+    /* animation: fadeIn 2s ease-in-out, slideUp 2s ease-in-out; */
 }
 
 .art1 {
@@ -67,6 +100,13 @@
 .art2 {
     max-width: 50%;
     max-height: 33vh;
+    height: auto;
+    width: auto;
+}
+
+.me {
+    max-width: clamp(400px,50vw,100%);
+    max-height: clamp(400px,50vh,100%);
     height: auto;
     width: auto;
 }
@@ -89,4 +129,9 @@
 @keyframes slideDownExtra {
     0% { transform: translateY(-70%); }
     100% { transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    0% { transform: translateX(-5%); }
+    100% { transform: translateX(0); }
 }
