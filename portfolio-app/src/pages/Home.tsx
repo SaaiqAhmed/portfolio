@@ -9,58 +9,31 @@ import art2 from '../images/web-art-flinders.png';
 import me from '../images/saaiq.png';
 
 function Home() {
-  // const ref = useRef(null);
-  // const isInView = useInView(ref, {once: true});
-  // const mainControls = useAnimation();
-
   const artContainerRef = useRef<HTMLDivElement>(null);
-  const [loadedImages, setLoadedImages] = useState(0);
-  const [pageHeight, setPageHeight] = useState("100vh");
-  const totalImages = 2;
-  const location = useLocation();
-  const handleImageLoad = () => {setLoadedImages(loadedImages + 1);};
-  const updateHeight = () => {
-    if (artContainerRef.current) {
-      const artHeight = artContainerRef.current.clientHeight;
-      setPageHeight(`calc(100vh - 75px - ${artHeight}px)`);
-    }
-  };
-
+  const [pageHeight, setPageHeight] = useState('100vh');
   const age = new Date().getFullYear() - 2003;
 
-  // useEffect(() => {
-  //   if (isInView) {
-  //     mainControls.start("visible");
-  //   }
-  // }, [isInView]);
-
   useEffect(() => {
-    if (loadedImages === totalImages) {
-      updateHeight();
+    const artContainer = artContainerRef.current;
+    if (!artContainer) return;
 
-      const handleResize = () => {
-        updateHeight();
-      };
-
-      window.addEventListener("resize", updateHeight); // Update on resize
-
-      return () => window.removeEventListener("resize", handleResize);
+    const observer = new ResizeObserver(entries => {
+      for (let entry of entries) {
+        const {height} = entry.contentRect;
+        console.log(height);
+        setPageHeight(`calc(100vh - 75px - ${height}px)`);
+      }
     }
-  }, [loadedImages]);
-
-  // Recalculate height when the route (page) changes.
-  useEffect(() => {
-    console.log("Loaded images: ", loadedImages);
-    if (location.pathname === "/home" && loadedImages === totalImages) {
-      updateHeight();
-    }
-  }, [location.pathname, loadedImages]);
+    );
+    observer.observe(artContainer);
+    return () => observer.disconnect();
+  },[]);
 
   return (
       <>
       <div className='artContainer' ref={artContainerRef}>
-        <img src={art1} alt="cactus" className="art1" onLoad={handleImageLoad} />
-        <img src={art2} alt="flinders" className="art2" onLoad={handleImageLoad} />
+        <img src={art1} alt="cactus" className="art1"/>
+        <img src={art2} alt="flinders" className="art2"/>
       </div>
       <div className={styles.Background}>
         <section>
@@ -84,16 +57,16 @@ function Home() {
         <section>
           <div className="page about" style={{ height: pageHeight }}>
             <motion.img
-            initial={{opacity: 0, translateY: -10}}
-            whileInView={{opacity: 1, translateY: 0}}
+            initial={{translateY: -100}}
+            whileInView={{translateY: 0}}
             transition={{duration: 1, delay: 0.1}}
             src={me}
             alt="Saaiq Ahmed"
             className="me"/>
             <motion.div
             className='aboutCard'
-            initial={{opacity: 0, translateY: -10}}
-            whileInView={{opacity: 1, translateY: 0}}
+            initial={{translateY: -100}}
+            whileInView={{ translateY: 0}}
             transition={{duration: 1, delay: 0.1}}>
               <p className='aboutText'>Test {age}</p>
             </motion.div>
