@@ -37,7 +37,7 @@ function Home() {
       </div>
       <div className={styles.Background}>
         <section>
-          <div className="page" style={{ height: pageHeight }}>
+          <div className="page Main" style={{ height: pageHeight }}>
             <motion.header 
               className="title"
               initial={{opacity: 0, translateY: -100}}
@@ -57,18 +57,49 @@ function Home() {
         <section>
           <div className="page about" style={{ height: pageHeight }}>
             <motion.img
-            initial={{translateY: -100}}
-            whileInView={{translateY: 0}}
+            initial={{opacity: 0}}
+            whileInView={{opacity: 1}}
             transition={{duration: 1, delay: 0.1}}
             src={me}
             alt="Saaiq Ahmed"
             className="me"/>
             <motion.div
             className='aboutCard'
-            initial={{translateY: -100}}
-            whileInView={{ translateY: 0}}
+            initial={{opacity: 0}}
+            whileInView={{ opacity: 1}}
             transition={{duration: 1, delay: 0.1}}>
-              <p className='aboutText'>Test {age}</p>
+              <div className="aboutText">
+                <h1 className="heading1">Who Am I?</h1>
+                <p className="normalText">
+                  <b>Name:</b> &nbsp; Saaiq Ahmed
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <b>Age:</b> &nbsp; {age} years old
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <b>Location:</b> &nbsp; Melbourne, Australia<br/><br/>
+
+                  <p>
+                    I am a graduate data scientist currently both working part-time as a data cadet as well as finishing my final year of my masters.
+                    I have a passion for new technologies and art while having a keen interest in machine learning and artificial intelligence field. 
+                    I am always keen for new opportunities and challenges to further develop my skills and knowledge.
+                  </p><br/>
+
+                  <b><u>Education</u></b>
+                  <ul>
+                    <li>(2024 - 2025)&nbsp; Masters of Data Science, University of Melbourne</li>
+                    <li>(2021 - 2023)&nbsp; Bachelor of Science, Data Science Major, University of Melbourne</li>
+                  </ul><br/>
+
+                  <b><u>Relevant Experience</u></b>
+                  <ul>
+                    <li>(Feb 2024 - Mar 2025)&nbsp; Data Cadet, Department of Defence</li>
+                    <li>(Jul 2021 - Aug 2022)&nbsp; Graphic Designer, Scane Media</li>
+                    <li>(Dec 2018 - Dec 2018)&nbsp; Student Intern, CSIRO</li>
+                  </ul><br/>
+
+                  <b><u>Professional Skills</u></b>
+                  <p>[ADD SKILLS WITH ICONS HERE]</p>
+                </p>
+              </div>
             </motion.div>
           </div>
         </section>
