@@ -13,6 +13,14 @@
     padding: 0.75rem;
 }
 
+.header {
+    color: var(--title-colour);
+    font-size: min(7.5rem, 10vmax);
+    font-family: 'Gilda display', serif;
+    font-weight: 500;
+    letter-spacing: 0.5vmax;   
+}
+
 .subtitle {
     color: var(--title-colour);
     font-size: min(1.5rem, 2vmax);
@@ -70,6 +78,10 @@
 .about {
     display: flex;
     flex-direction: row;
+    justify-content: start;
+}
+
+.projects {
     justify-content: start;
 }
 

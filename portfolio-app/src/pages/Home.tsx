@@ -7,6 +7,9 @@ import styles from '../styles.module.css';
 import art1 from '../images/web-art-cactus.png';
 import art2 from '../images/web-art-flinders.png';
 import me from '../images/saaiq.png';
+import SlidesSection from '../components/slides';
+
+
 
 function Home() {
   const artContainerRef = useRef<HTMLDivElement>(null);
@@ -193,12 +196,25 @@ function Home() {
                     <a className="button normalText" href="https://www.linkedin.com/in/saaiq-ahmed-364b5a219/">
                       LinkedIn
                     </a>
-                    <div className="button normalText">
-                      Contact Me
-                    </div>
+                    <a className="button normalText" href='../files/SaaiqAhmed_resume.docx' download={true}>
+                      Resume
+                    </a>
                   </div>
               </div>
             </motion.div>
+          </div>
+        </section>
+        <section>
+          <div className='page projects' style={{height: pageHeight}}>
+            <motion.header 
+            className='header'
+            initial={{opacity: 0, translateY: -100}}
+            whileInView={{opacity: 1, translateY: 0}}
+            transition={{duration: 1, delay: 0.5}}>
+              Projects
+            </motion.header>
+            <SlidesSection />
+            <NavLink className="button normalText" to='/about'>More Projects</NavLink>
           </div>
         </section>
       </div>
