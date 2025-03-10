@@ -3,7 +3,7 @@
 STILL IN DEVELOPMENT
 
 - [X] Responsive nav bar
-- [] Home page
+- [ ] Home page
     - [X] title screen
         - [X] Responsive title screen
     - [X] About Me summary screen
